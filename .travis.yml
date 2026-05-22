@@ -1,0 +1,8 @@
+language: java
+
+jdk:
+  - openjdk11
+
+script:
+  - javac add.java
+  - java add
