@@ -12,6 +12,7 @@ java add
 ## GitHub and CI setup
 
 1. Create a GitHub repository for this project.
+	- Use the name `DevOps-ABA` under the `niroop27` account.
 2. Connect your local repo to GitHub:
 
 ```powershell
@@ -21,7 +22,9 @@ git push -u origin main
 ```
 
 3. Connect the repository to CircleCI and enable the project.
+	- Sign in to CircleCI with GitHub and select the repository.
 4. Connect the repository to Travis CI and enable builds for the repo.
+	- Sign in to Travis CI with GitHub and turn on the repository.
 5. Push a change and confirm both pipelines compile and run `add.java`.
 
 ## Files
