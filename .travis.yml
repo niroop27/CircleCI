@@ -3,6 +3,16 @@ language: java
 jdk:
   - openjdk11
 
-script:
-  - javac add.java
-  - java add
+stages:
+  - name: build
+  - name: run
+    if: branch = main
+
+jobs:
+  include:
+    - stage: build
+      script:
+        - javac add.java
+    - stage: run
+      script:
+        - java add
