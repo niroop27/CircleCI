@@ -1,5 +1,8 @@
 # DevOps ABA CI Demo
 
+[![CircleCI](https://circleci.com/gh/niroop27/DevOps-ABA.svg?style=shield)](https://app.circleci.com/pipelines/github/niroop27/DevOps-ABA)
+[![Travis CI](https://travis-ci.com/niroop27/DevOps-ABA.svg?branch=main)](https://app.travis-ci.com/github/niroop27/DevOps-ABA)
+
 This repository contains a minimal Java program and CI configuration for GitHub, CircleCI, and Travis CI.
 
 ## Run locally
