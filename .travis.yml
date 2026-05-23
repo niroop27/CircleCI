@@ -15,4 +15,5 @@ jobs:
         - javac add.java
     - stage: run
       script:
+        - javac add.java
         - java add
