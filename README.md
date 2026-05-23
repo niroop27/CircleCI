@@ -1,37 +1,31 @@
-# DevOps ABA CI Demo
+# GitHub + CircleCI Demo
 
-[![CircleCI](https://circleci.com/gh/niroop27/DevOps-ABA.svg?style=shield)](https://app.circleci.com/pipelines/github/niroop27/DevOps-ABA)
-[![Travis CI](https://travis-ci.com/niroop27/DevOps-ABA.svg?branch=main)](https://app.travis-ci.com/github/niroop27/DevOps-ABA)
+This repository demonstrates a simple GitHub-to-CircleCI integration.
 
-This repository contains a minimal Java program and CI configuration for GitHub, CircleCI, and Travis CI.
+## What happens
 
-## Run locally
-
-```bash
-javac add.java
-java add
-```
-
-## GitHub and CI setup
-
-1. Create a GitHub repository for this project.
-	- Use the name `DevOps-ABA` under the `niroop27` account.
-2. Connect your local repo to GitHub:
-
-```powershell
-git remote add origin https://github.com/niroop27/DevOps-ABA.git
-git branch -M main
-git push -u origin main
-```
-
-3. Connect the repository to CircleCI and enable the project.
-	- Sign in to CircleCI with GitHub and select the repository.
-4. Connect the repository to Travis CI and enable builds for the repo.
-	- Sign in to Travis CI with GitHub and turn on the repository.
-5. Push a change and confirm both pipelines compile and run `add.java`.
+- You push a change to GitHub.
+- CircleCI automatically picks up the commit.
+- The pipeline compiles and runs the Java program.
+- The program output appears in the CircleCI job logs.
 
 ## Files
 
-- add.java: simple Java program that prints the sum of two integers.
-- .circleci/config.yml: CircleCI pipeline that compiles and runs the program.
-- .travis.yml: Travis CI pipeline that compiles and runs the program.
+- `Add.java` - a tiny Java app that prints a demo message and a calculation.
+- `.circleci/config.yml` - CircleCI pipeline configuration.
+
+## Expected CircleCI output
+
+When the pipeline runs, you should see output similar to:
+
+```text
+CircleCI demo pipeline ran successfully.
+10 + 20 = 30
+```
+
+## How to use
+
+1. Push this repository to GitHub.
+2. Connect the repository to CircleCI.
+3. Make any code change and push again.
+4. Open the CircleCI job to see the build output in the logs.

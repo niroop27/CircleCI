@@ -1,8 +1,10 @@
-class add {
+public class Add {
     public static void main(String[] args) {
-        int a = 5;
-        int b = 7;
-        int sum = a + b;
-        System.out.println("Sum of a and b is " + sum);
+        int firstNumber = 10;
+        int secondNumber = 20;
+        int sum = firstNumber + secondNumber;
+
+        System.out.println("CircleCI demo pipeline ran successfully.");
+        System.out.println(firstNumber + " + " + secondNumber + " = " + sum);
     }
 }

@@ -1,19 +1,19 @@
 version: 2.1
 
 jobs:
-  build_and_run:
+  build-and-run:
     docker:
-      - image: cimg/openjdk:11.0
+      - image: cimg/openjdk:17.0
     steps:
       - checkout
       - run:
-          name: Compile Java program
-          command: javac add.java
+          name: Compile Java source
+          command: javac Add.java
       - run:
-          name: Run Java program
-          command: java add
+          name: Run the demo app
+          command: java Add
 
 workflows:
-  ci:
+  demo-workflow:
     jobs:
-      - build_and_run
+      - build-and-run
