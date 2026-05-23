@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  build:
+  build_and_run:
     docker:
       - image: cimg/openjdk:11.0
     steps:
@@ -9,26 +9,11 @@ jobs:
       - run:
           name: Compile Java program
           command: javac add.java
-      - persist_to_workspace:
-          root: .
-          paths:
-            - add.class
-
-  test:
-    docker:
-      - image: cimg/openjdk:11.0
-    steps:
-      - checkout
-      - attach_workspace:
-          at: .
       - run:
           name: Run Java program
           command: java add
 
 workflows:
-  build_and_test:
+  ci:
     jobs:
-      - build
-      - test:
-          requires:
-            - build
+      - build_and_run
